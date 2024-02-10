@@ -95,11 +95,15 @@ Genres
 - Apple Books on Mac
 - Kindle
 - Libby app
-
+- Spotify
+- Gdrive
 
 <!-- ROADMAP -->
 ## Roadmap
+### Rough Wireframe 
+![alt text](image.png)
 
+### Features
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
