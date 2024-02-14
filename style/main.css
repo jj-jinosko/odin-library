@@ -1,0 +1,93 @@
+:root {
+    --teal-050: #d9ffeb;
+    --teal-300: #4DB6AC;
+    --teal-400: #26A69A;
+    --teal-500: #009688;
+    --teal-800: #00695C;
+    --teal-900: #004D40;
+
+    --grey-050: #f5f7fa;
+    --grey-100: #CFD8DC;
+    --grey-200: #B0BEC5;
+    --grey-900: #1f2933;
+
+
+
+    --color-background: var(--grey-200);
+}
+
+
+/* typography */
+
+/* reset defaults */
+
+:root {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* min-width: 0; */
+}
+
+
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+}
+
+
+/* basic styling */
+
+.global-wrapper {
+    background-color: var(--color-background);
+    /* min-height: 100vh */
+    min-height: 100vh;
+}
+
+.wrapper {
+    border: 1px solid black;
+
+    max-width: 1440px;
+    margin: auto;
+    padding-inline: 6em;
+}
+
+.wrapper > * {
+    border: 2px solid navy;
+}
+
+
+header,
+.queue-container,
+footer {
+    background-color: var(--teal-300);
+}
+
+
+/* header */
+header {
+}
+
+/* main */
+main > * {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+.queue {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.queue > * {
+    border: 1px solid olivedrab;
+}
+
+/* footer */
