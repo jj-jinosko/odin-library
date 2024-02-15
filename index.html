@@ -13,7 +13,7 @@
             <nav>nav</nav>
         </header>
         <main class="wrapper">
-            <div class="hero">
+            <!-- <div class="hero">
                 <h2>Reflection quote</h2>
                 <p class="quote">
                 "The great path has no gates,<br>
@@ -43,23 +43,35 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="library">
                 Library
                 <button class="pushMe">PUSH ME</button>
                 <aside>filter/sort</aside>
                 <div class="books-container">
                     <h2>Books</h2>
+                    <div class="book">
+                        <form id="bookForm" action="" method="">
+                            <div class="title input">
+                                <label for="newTitle">Title<span aria-label="required">*</span></label>
+                                <input id="newTitle" type="text" name="title" required>
+                            </div>
+                            <div class="author input">
+                                <label for="newAuthor">Author<span aria-label="required">*</span></label>
+                                <input id="newAuthor" type="text" name="author" required>
+                            </div>
+                            <div class="quote input">
+                                <label for="newQuote">Quote</label>
+                                <input id="newQuote" type="text" name="quote">
+                            </div>
+                            <div class="read input">
+                                <label for="newRead">Read?</label>
+                                <input id="newRead" type="text" name="read">
+                            </div>
+                            <button class="addBookBtn" type="submit input">submit</button>
+                        </form>
+                    </div>
                     <div class="bookshelf">
-                        <div class="book">book1</div>
-                        <!-- <ul>
-                            <li class="book">Book1
-                                <div class="title">title</div>
-                                <div class="author">author</div>
-                                <div class="quote">quote</div>
-                                <div class="read">read</div>
-                            </li>
-                        </ul> -->
                     </div>
                 </div>
             </div>
