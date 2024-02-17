@@ -25,7 +25,7 @@ const book2 = {
     title: "The Andromeda Strain ",
     author: "Micahel Crichton",
     quote: "The rock, for its part, is not even aware of our existence because we are alive for only a brief instant of its lifespan. To it, we are like flashes in the dark.",
-    read: true,
+    read: false,
 }
 
 const book3 = new Book(
@@ -58,7 +58,7 @@ function displayBook(bookNum) {
         let bookTitle = document.createElement("div");
         let bookAuthor = document.createElement("div");
         let bookQuote = document.createElement("div");
-        let bookRead = document.createElement("div");
+        let bookRead = document.createElement("button");
         let deleteBookBtn = document.createElement("button");
 
         // book.setAttribute("class", "test");
@@ -82,6 +82,16 @@ function displayBook(bookNum) {
         bookQuote.innerText = myLibrary[bookNum].quote;
         bookRead.innerText = myLibrary[bookNum].read;
         deleteBookBtn.innerText = "delete";
+
+        bookRead.addEventListener('click', (event) => {
+            // true/false was converted to string
+            if (bookRead.innerText == "false"){
+                bookRead.innerText = "true";
+            }
+            else {
+                bookRead.innerText = "false";
+            }
+        })
 
         deleteBookBtn.addEventListener('click', (event) => {
             console.log('event.targetparentNode.id', event.target.parentNode.id);
