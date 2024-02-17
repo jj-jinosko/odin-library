@@ -40,9 +40,13 @@ const myLibrary = [];
 const bookshelf = document.querySelector(".bookshelf");
 
 
-
-function addBookToLibrary(newBook) {
+function addBook(newBook) {
     myLibrary.push(newBook)
+}
+
+function deleteBook(book) {
+    myLibrary.pop(book);
+    //are you sure? modal
 }
 
 myLibrary.push(book1, book2);
@@ -55,23 +59,35 @@ function displayBook(bookNum) {
         let bookAuthor = document.createElement("div");
         let bookQuote = document.createElement("div");
         let bookRead = document.createElement("div");
+        let deleteBookBtn = document.createElement("button");
 
+        // book.setAttribute("class", "test");
         book.setAttribute("class", "book");
+        book.setAttribute("id", bookNum);
         bookTitle.setAttribute("class", "title");
         bookAuthor.setAttribute("class", "author");
         bookQuote.setAttribute("class", "quote");
         bookRead.setAttribute("class", "read");
+        deleteBookBtn.setAttribute("class", "deleteBookBtn");
 
         bookshelf.prepend(book); // make new book the first one displayed after the input form
         book.appendChild(bookTitle);
         book.appendChild(bookAuthor);
         book.appendChild(bookQuote);
         book.appendChild(bookRead);
+        book.appendChild(deleteBookBtn);
         
         bookTitle.innerText = myLibrary[bookNum].title;
         bookAuthor.innerText = myLibrary[bookNum].author;
         bookQuote.innerText = myLibrary[bookNum].quote;
         bookRead.innerText = myLibrary[bookNum].read;
+        deleteBookBtn.innerText = "delete";
+
+        deleteBookBtn.addEventListener('click', (event) => {
+            console.log('event.targetparentNode.id', event.target.parentNode.id);
+            event.target.parentNode.style.display = 'none';
+            myLibrary.splice(`${(event.target.parentNode.id)}, 1`);
+        })
 }
 
 // load existing books when window opens
@@ -82,10 +98,8 @@ window.addEventListener("load", () => {
     }
   });
 
-// make new book and add to library
-
+// make new book
 function makeBook(){
-    // let newBook = document.getElementById("newTitle");
     let newTitle = document.getElementById("newTitle").value;
     let newAuthor = document.getElementById("newAuthor").value;
     let newQuote = document.getElementById("newQuote").value;
@@ -99,19 +113,36 @@ function makeBook(){
     return newBook;
 }
 
+// enable add book button
 const addBookBtn = document.querySelector(".addBookBtn");
 addBookBtn.addEventListener("click", (e) => {
     e.preventDefault(); // prevent submit button from reloading pg bc no data is actually getting back to server
-    addBookToLibrary(makeBook());
+    // preventDefault seems to mess up required property
+    // add check to prevent repeat books, bookExistsCheck()
+    addBook(makeBook());
     displayBook(myLibrary.length - 1);
     document.getElementById("bookForm").reset();
 })
 
-// test button
+// enable delete book button
+// seems redundant? already have deleteBookBtn but can't acces bc scoping
+// const deleteBookBtns = document.querySelectorAll(".deleteBookBtn");
+// deleteBookBtns.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//         console.log('please');
+//     });
+// });
 
+// const books = document.querySelectorAll(".book");
+// books.forEach(book => {
+//     console.log('please work', book)
+// });
+
+
+// test button
 const testButton = document.querySelector(".pushMe");
 testButton.addEventListener("click", () => { 
-    addBookToLibrary(book3);
+    addBook(book3);
     displayBook(myLibrary.length - 1);
 });
 
