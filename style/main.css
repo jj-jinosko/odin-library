@@ -69,26 +69,26 @@ footer {
     background-color: white;
 }
 
-/* header */
+/* ------------header------------ */
 header {
     display: flex;
     justify-content: space-between;
 }
 
-/* main */
+/* -----------main-------------*/
 main > * {
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.queue {
+/* .queue {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
 .queue > * {
     border: 1px solid olivedrab;
-}
+} */
 
 .books-wrapper{
     border: 2px dotted black;
@@ -99,18 +99,19 @@ main > * {
     margin: 1em;
 }
 
-/* .bookForm {
-    display: table;
-}
-
-form > .div {
-    display: table-row;
-}
-
-label,
-input {
-    display: table-cell;
+/* table, tr, th, td {
+    border: 1px solid black;
 } */
+
+th {
+    width: 2.5em;
+}
+
+table,
+input,
+textarea {
+    width: 100%;
+}
 
 .bookshelf {
     display: grid;
@@ -137,4 +138,4 @@ input {
 }
 
 
-/* footer */
+/* ------------footer------------*/
