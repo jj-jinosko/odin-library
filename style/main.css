@@ -1,10 +1,12 @@
 :root {
-    --teal-050: #d9ffeb;
+    --teal-050: #E0F2F1;
     --teal-300: #4DB6AC;
     --teal-400: #26A69A;
     --teal-500: #009688;
     --teal-800: #00695C;
     --teal-900: #004D40;
+
+    --pink-100: rgb(216, 187, 192);
 
     --grey-050: #f5f7fa;
     --grey-100: #CFD8DC;
@@ -13,11 +15,18 @@
 
 
 
-    --color-background: var(--grey-200);
+    --color-background: var(--teal-050);
+    --color-font: var(--grey-900);
 }
 
 
 /* typography */
+
+:root {
+    color: var(--color-font);
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4;
+}
 
 /* reset defaults */
 
@@ -35,18 +44,10 @@ img {
     /* min-width: 0; */
 }
 
-
-html {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.4;
-}
-
-
 /* basic styling */
 
 .global-wrapper {
     background-color: var(--color-background);
-    /* min-height: 100vh */
     min-height: 100vh;
 }
 
@@ -58,28 +59,27 @@ html {
     padding-inline: 6em;
 }
 
-.wrapper > * {
-    border: 2px solid navy;
-}
-
-
 header,
 .queue-container,
 footer {
     background-color: var(--teal-300);
 }
 
+.book {
+    background-color: white;
+}
 
 /* header */
-/* header {
-} */
+header {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* main */
 main > * {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-
 
 .queue {
     display: grid;
@@ -90,17 +90,30 @@ main > * {
     border: 1px solid olivedrab;
 }
 
+.books-wrapper{
+    border: 2px dotted black;
+    padding: 1em;
+}
+
+.books-wrapper > * {
+    margin: 1em;
+}
+
+.bookForm {
+    /* margin: 1em; */
+}
+
 .bookshelf {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
+    margin: 1em;
 }
 
 /* book styling */
 
 .book {
     border: 2px solid black;
-
     padding: 1.5em;
 
 }
