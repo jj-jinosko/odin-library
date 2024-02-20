@@ -50,31 +50,35 @@
             </div> -->
             <div class="library">
                 <!-- Library -->
-                <!-- <button class="pushMe">PUSH ME</button>
-                <aside>filter/sort</aside> -->
+                <button class="pushMe">PUSH ME</button>
+                <!-- <aside>filter/sort</aside> -->
                 <div class="books-wrapper">
                     <h2>Books</h2>
                     <div class="bookForm book">
-                        <form id="bookForm" action="" method="">
-                            <div class="title input">
-                                <label for="newTitle">Title<span aria-label="required">*</span></label>
-                                <input id="newTitle" type="text" name="title" required>
-                            </div>
-                            <div class="author input">
-                                <label for="newAuthor">Author<span aria-label="required">*</span></label>
-                                <input id="newAuthor" type="text" name="author" required>
-                            </div>
-                            <div class="quote input">
-                                <label for="newQuote">Quote</label>
-                                <!-- <input id="newQuote" type="text" name="quote"> -->
-                                <textarea name="quote" id="newQuote" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="read input">
-                                <label for="newRead">Read?</label>
-                                <input id="newRead" type="text" name="read">
-                            </div>
-                            <button class="addBookBtn" type="submit input">submit</button>
-                        </form>
+                        <table>
+                            <!-- <thead>Add Book</thead> -->
+                            <form id="bookForm" action="" method="">
+                                <tr class="title input">
+                                    <td><label for="newTitle">Title<span aria-label="required">*</span></label></td>
+                                    <td><input id="newTitle" type="text" name="title" required></td>
+                                </tr>
+                                <tr class="author input">
+                                    <td><label for="newAuthor">Author<span aria-label="required">*</span></label></td>
+                                    <td><input id="newAuthor" type="text" name="author" required></td>
+                                </tr>
+                                <tr class="quote input">
+                                    <td><label for="newQuote">Quote</label></td>
+                                    <td><textarea name="quote" id="newQuote" cols="30" rows="10"></textarea></td>
+                                </tr>
+                                <tr class="read input">
+                                    <td><label for="newRead">Read?</label></td>
+                                    <td><input id="newRead" type="text" name="read"></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="addBookBtn" type="submit input">submit</button></td>
+                                </tr>
+                            </form>
+                        </table>
                     </div>
                     <div class="bookshelf">
                     </div>

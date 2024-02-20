@@ -99,9 +99,18 @@ main > * {
     margin: 1em;
 }
 
-.bookForm {
-    /* margin: 1em; */
+/* .bookForm {
+    display: table;
 }
+
+form > .div {
+    display: table-row;
+}
+
+label,
+input {
+    display: table-cell;
+} */
 
 .bookshelf {
     display: grid;
