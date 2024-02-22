@@ -44,10 +44,12 @@ function addBook(newBook) {
     myLibrary.push(newBook)
 }
 
-function deleteBook(book) {
-    myLibrary.pop(book);
-    //are you sure? modal
-}
+// function deleteBook(book) {
+//     myLibrary.pop(book);
+//     //are you sure? modal
+// }
+
+
 
 myLibrary.push(book1, book2);
 // console.log(myLibrary)
@@ -60,6 +62,11 @@ function displayBook(bookNum) {
         let bookQuote = document.createElement("div");
         let bookRead = document.createElement("button");
         let deleteBookBtn = document.createElement("button");
+        let modal = document.createElement("div");
+        // let closeModal = document.createElement("span");
+        let modalText = document.createElement("div");
+        let confirmDeleteBtn = document.createElement("button");
+        let cancelModalBtn = document.createElement("button");
 
         // book.setAttribute("class", "test");
         book.setAttribute("class", "book");
@@ -69,6 +76,11 @@ function displayBook(bookNum) {
         bookQuote.setAttribute("class", "quote");
         bookRead.setAttribute("class", "read");
         deleteBookBtn.setAttribute("class", "deleteBookBtn");
+        modal.setAttribute("class", "modal")
+        // closeModal.setAttribute("class", "closeModal");
+        modalText.setAttribute("class", "modalText");
+        confirmDeleteBtn.setAttribute("class", "confirmDeleteBtn");
+        cancelModalBtn.setAttribute("class", "cancelModalBtn");
 
         bookshelf.prepend(book); // make new book the first one displayed after the input form
         book.appendChild(bookTitle);
@@ -76,12 +88,23 @@ function displayBook(bookNum) {
         book.appendChild(bookQuote);
         book.appendChild(bookRead);
         book.appendChild(deleteBookBtn);
+        book.appendChild(modal);
+        // modal.appendChild(closeModal);
+        modal.appendChild(modalText);
+        modal.appendChild(cancelModalBtn);
+        modal.appendChild(confirmDeleteBtn);
         
         bookTitle.innerText = myLibrary[bookNum].title;
         bookAuthor.innerText = myLibrary[bookNum].author;
         bookQuote.innerText = myLibrary[bookNum].quote;
         bookRead.innerText = myLibrary[bookNum].read;
         deleteBookBtn.innerText = "delete";
+        // modal.innerText = "modal"; //this overwrites appended children
+        modal.style.display = "none";
+        // closeModal.innerText = "x";
+        modalText.innerText = "Are you sure you want to delete this book?";
+        cancelModalBtn.innerText = "CANCEL";
+        confirmDeleteBtn.innerText = "DELETE";
 
         bookRead.addEventListener('click', (event) => {
             // true/false was converted to string
@@ -93,11 +116,35 @@ function displayBook(bookNum) {
             }
         })
 
-        deleteBookBtn.addEventListener('click', (event) => {
-            console.log('event.targetparentNode.id', event.target.parentNode.id);
-            event.target.parentNode.style.display = 'none';
+        // closeModal.innerText = "x";
+        cancelModalBtn.addEventListener('click', (event) => {
+            console.log('event.target.parentNode', event.target.parentNode)
+            event.target.parentNode.style.display = "none";
+        })
+
+        confirmDeleteBtn.addEventListener('click', (event) => {
+            console.log('event.target.parentNode.parentNode.id', event.target.parentNode.parentNode.id);
+            
+            event.target.parentNode.parentNode.style.display = 'none';
             myLibrary.splice(`${(event.target.parentNode.id)}, 1`);
         })
+
+        deleteBookBtn.addEventListener('click', (event) => {
+            // hide the deleteBookBtn element
+            event.target.style.display = "none";
+            // display the modal element
+            console.log('event.target.parentNode.lastChild', event.target.parentNode.lastChild);
+            event.target.parentNode.lastChild.style.display = "block";
+
+        })
+    
+        // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if (event.target != modal && modal.style.display != "none") {
+
+        // modal.style.display = "none";
+        //     }
+        // }
 }
 
 // load existing books when window opens
@@ -134,26 +181,10 @@ addBookBtn.addEventListener("click", (e) => {
     document.getElementById("bookForm").reset();
 })
 
-// enable delete book button
-// seems redundant? already have deleteBookBtn but can't acces bc scoping
-// const deleteBookBtns = document.querySelectorAll(".deleteBookBtn");
-// deleteBookBtns.forEach(btn => {
-//     btn.addEventListener("click", () => {
-//         console.log('please');
-//     });
-// });
-
-// const books = document.querySelectorAll(".book");
-// books.forEach(book => {
-//     console.log('please work', book)
-// });
-
-
 // test button
 const testButton = document.querySelector(".pushMe");
 testButton.addEventListener("click", () => { 
     addBook(book3);
     displayBook(myLibrary.length - 1);
 });
-
 
