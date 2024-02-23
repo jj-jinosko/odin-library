@@ -23,7 +23,7 @@ const book1 = new Book(
 
 const book2 = {
     title: "The Andromeda Strain ",
-    author: "Micahel Crichton",
+    author: "Michael Crichton",
     quote: "The rock, for its part, is not even aware of our existence because we are alive for only a brief instant of its lifespan. To it, we are like flashes in the dark.",
     read: false,
 }
@@ -34,7 +34,54 @@ const book3 = new Book(
     "There is one kind of prison where the man is behind bars, and everything that he desires is outside; and there is another kind where the things are behind the bars, and the man is outside., They were trying to save their souls- and who but a fool could fail to see that all that was the matter with their souls was that they had not been able to get a decent existence for their bodies?",
     true,
 )
+// Dune, Hitchhiker's guide, our mathematical universe, 
+// nathaniel hawthorne (birthmark), 
+// Brave New World,
+// "A Clockwork Orange", "Anthony Burgess", 
+// "Candide", "Voltaire", 
+// "Atomic Habits", "James Clear", 
 
+const surprise1 = new Book(
+    "Snow Crash", 
+    "Neal Stephenson", 
+    "See, the world is full of things more powerful than us. But if you know how to catch a ride, you can go places,", 
+    "true",
+)
+
+const surprise2 = new Book(
+    "Flatland, A Romance of Many Dimensions", 
+    "Edwin A. Abbott", 
+    "Distress not yourself if you cannot at first understand the deeper mysteries of Spaceland. By degrees they will dawn upon you.", 
+    "true", 
+)
+
+const surprise3 = new Book(
+    "The Metamorphosis", 
+    "Franz Kafka",
+    "Was he an animal, that music could move him so? He felt as if the way to the unknown nourishment he longed for were coming to light.",
+    true,
+)
+
+const surprise4 = new Book(
+    "The Secret Garden",
+    "Frances Hodgson Burnett",
+    "At first people refuse to believe that a strange new thing can be done, then they begin to hope it can be done, then they see it can be done--then it is done and all the world wonders why it was not done centuries ago., Where you tend a rose my lad, a thistle cannot grow.",
+    "true",
+)
+
+
+// Candide
+// Secret griefs are more cruel than public calamities.,
+// It is demonstrable," said he, "that things cannot be otherwise than as they are; for as all things have been created for some end, they must necessarily be created for the best end. Observe, for instance, the nose is formed for spectacles, therefore we wear spectacles. The legs are visibly designed for stockings, accordingly we wear stockings. Stones were made to be hewn and to construct castles, therefore My Lord has a magnificent castle; for the greatest baron in the province ought to be the best lodged. Swine were intended to be eaten, therefore we eat pork all the year round: and they, who assert that everything is right, do not express themselves correctly; they should say that everything is best."`,
+   
+const surprise5 = new Book(
+    "Candide",
+    "Voltaire",
+    "Let us cultivate our garden.",
+    "true",
+
+)
+const mySurpriseLibrary = [surprise1, surprise2, surprise3, surprise4, surprise5];
 
 const myLibrary = [];
 const bookshelf = document.querySelector(".bookshelf");
@@ -44,6 +91,22 @@ function addBook(newBook) {
     myLibrary.push(newBook)
 }
 
+function addSurprise(){
+    let surpriseBook;
+    console.log("length", mySurpriseLibrary.length);
+    if (mySurpriseLibrary.length > 0) {
+        let surpriseNum = Math.floor(Math.random()*mySurpriseLibrary.length);
+        surpriseBook = mySurpriseLibrary[surpriseNum];
+        console.log(surpriseBook.title);
+        mySurpriseLibrary.splice(surpriseNum, 1);
+        console.log(mySurpriseLibrary);
+    } else {
+        surpriseBook = null; //No more suprises =,[
+        console.log('No more surprises left =,[');
+    }
+    return surpriseBook
+}
+
 // function deleteBook(book) {
 //     myLibrary.pop(book);
 //     //are you sure? modal
@@ -51,7 +114,7 @@ function addBook(newBook) {
 
 
 
-myLibrary.push(book1, book2);
+myLibrary.push(book1, book2, book3);
 // console.log(myLibrary)
 
 // display book
@@ -118,8 +181,12 @@ function displayBook(bookNum) {
 
         // closeModal.innerText = "x";
         cancelModalBtn.addEventListener('click', (event) => {
+            // hide modal
             console.log('event.target.parentNode', event.target.parentNode)
             event.target.parentNode.style.display = "none";
+            // display delete button again
+            console.log('find deleteBook btn', event.target.parentNode.parentNode.querySelector(".deleteBookBtn"))
+            event.target.parentNode.parentNode.querySelector(".deleteBookBtn").style.display = "block";
         })
 
         confirmDeleteBtn.addEventListener('click', (event) => {
@@ -181,10 +248,15 @@ addBookBtn.addEventListener("click", (e) => {
     document.getElementById("bookForm").reset();
 })
 
-// test button
-const testButton = document.querySelector(".pushMe");
-testButton.addEventListener("click", () => { 
-    addBook(book3);
+// surpriseMe button
+const surpriseMeBtn = document.querySelector(".surpriseMeBtn");
+surpriseMeBtn.addEventListener("click", () => { 
+    let surpriseBook = addSurprise();
+    if (surpriseBook != null){ //probably not the most error proof way to do this
+    addBook(surpriseBook);
     displayBook(myLibrary.length - 1);
+    } else {
+        alert('No more surprises =,[')
+    }
 });
 
