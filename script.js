@@ -14,39 +14,40 @@ function Book(title, author, quote, read) {
 //     true,
 // );
 
-const book1 = new Book(
+const book2 = new Book(
     "Braiding Sweetgrass", 
     "Robin Wall-Kimmerer",
     "Action on behalf of life transforms. Because the relationship between self and the world is reciprocal, it is not a question of first getting enlightened or saved and then acting. As we work to heal the earth, the earth heals us.",
     true,
 )
 
-const book2 = {
-    title: "The Andromeda Strain ",
-    author: "Michael Crichton",
-    quote: "The rock, for its part, is not even aware of our existence because we are alive for only a brief instant of its lifespan. To it, we are like flashes in the dark.",
-    read: false,
-}
-
 const book3 = new Book(
-    "The Jungle",
-    "Upton Sinclair",
-    "There is one kind of prison where the man is behind bars, and everything that he desires is outside; and there is another kind where the things are behind the bars, and the man is outside., They were trying to save their souls- and who but a fool could fail to see that all that was the matter with their souls was that they had not been able to get a decent existence for their bodies?",
-    true,
-)
-// Dune, Hitchhiker's guide, our mathematical universe, 
-// nathaniel hawthorne (birthmark), 
-// Brave New World,
-// "A Clockwork Orange", "Anthony Burgess", 
-// "Candide", "Voltaire", 
-// "Atomic Habits", "James Clear", 
-
-const surprise1 = new Book(
     "Snow Crash", 
     "Neal Stephenson", 
     "See, the world is full of things more powerful than us. But if you know how to catch a ride, you can go places,", 
     "true",
 )
+
+// , They were trying to save their souls- and who but a fool could fail to see that all that was the matter with their souls was that they had not been able to get a decent existence for their bodies?
+const book1 = new Book(
+    "The Jungle",
+    "Upton Sinclair",
+    "There is one kind of prison where the man is behind bars, and everything that he desires is outside; and there is another kind where the things are behind the bars, and the man is outside.",
+    true,
+)
+// Dune, Hitchhiker's guide, our mathematical universe, 
+// nathaniel hawthorne (birthmark), 
+// Brave New World,
+// "A Clockwork Orange", "Anthony Burgess", "Goodness is something chosen. When a man cannot choose he ceases to be a man."
+// "Candide", "Voltaire", 
+// "Atomic Habits", "James Clear", 
+
+const surprise1 = {
+    title: "The Andromeda Strain ",
+    author: "Michael Crichton",
+    quote: "The rock, for its part, is not even aware of our existence because we are alive for only a brief instant of its lifespan. To it, we are like flashes in the dark.",
+    read: false,
+}
 
 const surprise2 = new Book(
     "Flatland, A Romance of Many Dimensions", 
@@ -62,22 +63,28 @@ const surprise3 = new Book(
     true,
 )
 
+// , Where you tend a rose my lad, a thistle cannot grow.
 const surprise4 = new Book(
     "The Secret Garden",
     "Frances Hodgson Burnett",
-    "At first people refuse to believe that a strange new thing can be done, then they begin to hope it can be done, then they see it can be done--then it is done and all the world wonders why it was not done centuries ago., Where you tend a rose my lad, a thistle cannot grow.",
+    "At first people refuse to believe that a strange new thing can be done, then they begin to hope it can be done, then they see it can be done--then it is done and all the world wonders why it was not done centuries ago.",
     "true",
 )
 
 
 // Candide
+//"Let us cultivate our garden."
 // Secret griefs are more cruel than public calamities.,
-// It is demonstrable," said he, "that things cannot be otherwise than as they are; for as all things have been created for some end, they must necessarily be created for the best end. Observe, for instance, the nose is formed for spectacles, therefore we wear spectacles. The legs are visibly designed for stockings, accordingly we wear stockings. Stones were made to be hewn and to construct castles, therefore My Lord has a magnificent castle; for the greatest baron in the province ought to be the best lodged. Swine were intended to be eaten, therefore we eat pork all the year round: and they, who assert that everything is right, do not express themselves correctly; they should say that everything is best."`,
+// It is demonstrable," said he, "that things cannot be otherwise than as they are; for as all things have been created for some end, they must necessarily be created for the best end. Observe, for instance, the nose is formed for spectacles, therefore we wear spectacles. The legs are visibly designed for stockings, accordingly we wear stockings. Stones were made to be hewn and to construct castles, therefore My Lord has a magnificent castle; for the greatest baron in the province ought to be the best lodged. Swine were intended to be eaten, therefore we eat pork all the year round: and they, who assert that everything is right, do not express themselves correctly; they should say that everything is best.",
    
 const surprise5 = new Book(
     "Candide",
     "Voltaire",
-    "Let us cultivate our garden.",
+    `It is demonstrable," said he, "that things cannot be otherwise than as they are; for as all things have been created for some end, they must necessarily be created for the best end. Observe, for instance, the nose is formed for spectacles, therefore we wear spectacles. 
+    The legs are visibly designed for stockings, accordingly we wear stockings. 
+    Stones were made to be hewn and to construct castles...
+    and they, who assert that everything is right, do not express themselves correctly; 
+    they should say that everything is best.`,
     "true",
 
 )
