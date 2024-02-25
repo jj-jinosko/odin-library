@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reflection Library</title>
-    <link rel="stylesheet" href="./style/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
     <div class="global-wrapper">
-        <header class="wrapper">
-            <div class="logo left">Reflection Library</div>
-            <div class="right">
-                <a href="https://github.com/jj-jinosko/" target=”_blank” class="href">Github</a>
-                <a href="https://www.linkedin.com/in/jessicajinosko" target=”_blank” class="href">Linkedin</a>
-                <a href="" target=”_blank” class="href">Contact Me</a>
-            </div>
-        </header>
-        <main class="wrapper">
-            <!-- <div class="hero">
+      <header class="wrapper">
+        <div class="logo left">Reflection Library</div>
+        <div class="right">
+          <a
+            href="https://github.com/jj-jinosko/"
+            target="”_blank”"
+            class="href"
+            >Github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jessicajinosko"
+            target="”_blank”"
+            class="href"
+            >Linkedin</a
+          >
+          <a href="" target="”_blank”" class="href">Contact Me</a>
+        </div>
+      </header>
+      <main class="wrapper">
+        <!-- <div class="hero">
                 <h2>Reflection quote</h2>
                 <p class="quote">
                 "The great path has no gates,<br>
@@ -48,14 +58,14 @@
                     </div>
                 </div>
             </div> -->
-            <div class="library">
-                <!-- Library -->
-                <button class="surpriseMeBtn">SURPRISE ME!</button>
-                <!-- <aside>filter/sort</aside> -->
-                <div class="books-wrapper">
-                    <h2>Books</h2>
+        <div class="library">
+          <!-- Library -->
+          <button class="surpriseMeBtn">SURPRISE ME!</button>
+          <!-- <aside>filter/sort</aside> -->
+          <div class="books-wrapper">
+            <h2>Books</h2>
 
-                    <!-- <button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>
+            <!-- <button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>
                     <div id="id01" class="modal">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <form class="modal-content" action="/action_page.php">
@@ -71,40 +81,60 @@
                     </form>
                     </div> -->
 
-                    <div class="book">
-                        <table>
-                            <!-- <thead>Add Book</thead> -->
-                            <form id="bookForm" action="" method="">
-                                <tr class="title input">
-                                    <th><label for="newTitle">Title<span aria-label="required">*</span></label></th>
-                                    <td><input id="newTitle" type="text" name="title" required></td>
-                                </tr>
-                                <tr class="author input">
-                                    <th><label for="newAuthor">Author<span aria-label="required">*</span></label></th>
-                                    <td><input id="newAuthor" type="text" name="author" required></td>
-                                </tr>
-                                <tr class="quote input">
-                                    <th><label for="newQuote">Quote</label></th>
-                                    <td><textarea name="quote" id="newQuote" rows="5"></textarea></td>
-                                </tr>
-                                <tr class="read input">
-                                    <th><label for="newRead">Read?</label></th>
-                                    <td><input id="newRead" type="text" name="read"></td>
-                                </tr>
-                                <tr>
-                                    <th><button class="addBookBtn" type="submit input">submit</button></th>
-                                </tr>
-                            </form>
-                        </table>
-                    </div>
-                    <div class="bookshelf">
-                    </div>
-                </div>
+            <div class="book">
+              <table>
+                <!-- <thead>Add Book</thead> -->
+                <form id="bookForm" action="" method="">
+                  <tr class="title input">
+                    <th>
+                      <label for="newTitle"
+                        >Title<span aria-label="required">*</span></label
+                      >
+                    </th>
+                    <td>
+                      <input id="newTitle" type="text" name="title" required />
+                    </td>
+                  </tr>
+                  <tr class="author input">
+                    <th>
+                      <label for="newAuthor"
+                        >Author<span aria-label="required">*</span></label
+                      >
+                    </th>
+                    <td>
+                      <input
+                        id="newAuthor"
+                        type="text"
+                        name="author"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr class="quote input">
+                    <th><label for="newQuote">Quote</label></th>
+                    <td>
+                      <textarea name="quote" id="newQuote" rows="5"></textarea>
+                    </td>
+                  </tr>
+                  <tr class="read input">
+                    <th><label for="newRead">Read?</label></th>
+                    <td><input id="newRead" type="text" name="read" /></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <button class="addBookBtn" type="submit input">
+                        submit
+                      </button>
+                    </th>
+                  </tr>
+                </form>
+              </table>
             </div>
-        </main>
-        <footer class="wrapper">
-            Thank you for visiting!
-        </footer>
+            <div class="bookshelf"></div>
+          </div>
+        </div>
+      </main>
+      <footer class="wrapper">Thank you for visiting!</footer>
     </div>
 
     <script src="./script.js"></script>
@@ -122,7 +152,5 @@
         // p.appendChild(p2); // works, need to add innertext to p first? No! I think innerText OVERWRITES p2!
         p2.innerText = "did p2 work?"
     </script>  -->
-
-
-</body>
+  </body>
 </html>

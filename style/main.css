@@ -1,84 +1,81 @@
 :root {
-    --teal-050: #E0F2F1;
-    --teal-300: #4DB6AC;
-    --teal-400: #26A69A;
-    --teal-500: #009688;
-    --teal-800: #00695C;
-    --teal-900: #004D40;
+  --teal-050: #e0f2f1;
+  --teal-300: #4db6ac;
+  --teal-400: #26a69a;
+  --teal-500: #009688;
+  --teal-800: #00695c;
+  --teal-900: #004d40;
 
-    --pink-100: rgb(216, 187, 192);
+  --pink-100: rgb(216, 187, 192);
 
-    --grey-050: #f5f7fa;
-    --grey-100: #CFD8DC;
-    --grey-200: #B0BEC5;
-    --grey-900: #1f2933;
+  --grey-050: #f5f7fa;
+  --grey-100: #cfd8dc;
+  --grey-200: #b0bec5;
+  --grey-900: #1f2933;
 
-
-
-    --color-background: var(--teal-050);
-    --color-font: var(--grey-900);
+  --color-background: var(--teal-050);
+  --color-font: var(--grey-900);
 }
-
 
 /* typography */
 
 :root {
-    color: var(--color-font);
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.4;
+  color: var(--color-font);
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.4;
 }
 
 /* reset defaults */
 
 :root {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    /* min-width: 0; */
+  margin: 0;
+  padding: 0;
+  /* min-width: 0; */
 }
 
 /* basic styling */
 
 .global-wrapper {
-    background-color: var(--color-background);
-    min-height: 100vh;
+  background-color: var(--color-background);
+  min-height: 100vh;
 }
 
 .wrapper {
-    border: 1px solid black;
+  border: 1px solid black;
 
-    max-width: 1440px;
-    margin: auto;
-    padding-inline: 6em;
+  max-width: 1440px;
+  margin: auto;
+  padding-inline: 6em;
 }
 
 header,
 .queue-container,
 footer {
-    background-color: var(--teal-300);
+  background-color: var(--teal-300);
 }
 
 .book {
-    background-color: white;
+  background-color: white;
 }
 
 /* ------------header------------ */
 header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -----------main-------------*/
 main > * {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 /* .queue {
@@ -90,13 +87,13 @@ main > * {
     border: 1px solid olivedrab;
 } */
 
-.books-wrapper{
-    border: 2px dotted black;
-    padding: 1em;
+.books-wrapper {
+  border: 2px dotted black;
+  padding: 1em;
 }
 
 .books-wrapper > * {
-    margin: 1em;
+  margin: 1em;
 }
 
 /* table, tr, th, td {
@@ -104,45 +101,44 @@ main > * {
 } */
 
 th {
-    width: 2.5em;
+  width: 2.5em;
 }
 
 table,
 input,
 textarea {
-    width: 100%;
+  width: 100%;
 }
 
 .bookshelf {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1em;
-    margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  margin: 1em;
 }
 
 /* book styling */
 
 .book {
-    border: 2px solid black;
-    padding: 1.5em;
-
+  border: 2px solid black;
+  padding: 1.5em;
 }
 
 .title {
-    font-size: large;
-    font-weight: bold;
+  font-size: large;
+  font-weight: bold;
 }
 
 .author {
-    font-style: italic;
+  font-style: italic;
 }
 
 /* modal styling */
 
 .modal {
-    /* color: var(--grey-050);
+  /* color: var(--grey-050);
     background-color: var(--teal-500); */
-    border: 5px solid var(--teal-400);
+  border: 5px solid var(--teal-400);
 }
 
 /* ------------footer------------*/
