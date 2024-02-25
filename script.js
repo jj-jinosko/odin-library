@@ -147,7 +147,9 @@ function displayBook(bookNum) {
   bookAuthor.setAttribute("class", "author");
   bookQuote.setAttribute("class", "quote");
   bookRead.setAttribute("class", "read");
-  deleteBookBtn.setAttribute("class", "deleteBookBtn");
+//   deleteBookBtn.setAttribute("class", "deleteBookBtn fa fa-trash");
+  deleteBookBtn.setAttribute("class", "deleteBookBtn material-symbols-outlined");
+
   modal.setAttribute("class", "modal");
   // closeModal.setAttribute("class", "closeModal");
   modalText.setAttribute("class", "modalText");
@@ -171,6 +173,7 @@ function displayBook(bookNum) {
   bookQuote.innerText = myLibrary[bookNum].quote;
   bookRead.innerText = myLibrary[bookNum].read;
   deleteBookBtn.innerText = "delete";
+
   // modal.innerText = "modal"; //this overwrites appended children
   modal.style.display = "none";
   // closeModal.innerText = "x";
@@ -199,7 +202,7 @@ function displayBook(bookNum) {
     );
     event.target.parentNode.parentNode.querySelector(
       ".deleteBookBtn"
-    ).style.display = "block";
+    ).style.display = "inline-block";
   });
 
   confirmDeleteBtn.addEventListener("click", (event) => {

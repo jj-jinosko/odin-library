@@ -133,6 +133,24 @@ textarea {
   font-style: italic;
 }
 
+/* buttons styling */
+
+button {
+  background-color: var(--teal-300);
+  border: none;
+  border-radius: 5px;
+
+  padding: .5rem;
+}
+
+.deleteBookBtn {
+  background-color: white;
+}
+.deleteBookBtn > i {
+  color: var(--teal-800);
+
+}
+
 /* modal styling */
 
 .modal {
