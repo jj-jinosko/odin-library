@@ -1,18 +1,14 @@
 // Default books
 
-function Book(title, author, quote, read) {
-  this.title = title;
-  this.author = author;
-  this.quote = quote;
-  this.read = read;
+class Book {
+  constructor(title, author, quote, read){
+    this.title = title;
+    this.author = author;
+    this.quote = quote;
+    this.read = read;
+  }
 }
 
-// const book1 = new Book(
-//     "Island of the Blue Dolphins",
-//     "Scott O'Dell",
-//     "TBD",
-//     true,
-// );
 
 const book2 = new Book(
   "Braiding Sweetgrass",
