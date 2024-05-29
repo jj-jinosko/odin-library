@@ -163,6 +163,7 @@ function displayBook(bookNum) {
   book.appendChild(bookRead);
   book.appendChild(deleteBookBtn);
   book.appendChild(modal);
+  
   // modal.appendChild(closeModal);
   modal.appendChild(modalText);
   modal.appendChild(cancelModalBtn);
